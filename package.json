@@ -1,6 +1,6 @@
 {
   "name": "simple-react-countdown",
-  "version": "0.0.5",
+  "version": "0.0.7",
   "description": "A Countdown component in react for counting up to a number from zero",
   "main": "build/index.js",
   "peerDependencies": {
