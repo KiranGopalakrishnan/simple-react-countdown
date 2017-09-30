@@ -34,6 +34,9 @@ class Counter extends Component {
     );
   }
 }
-
+Counter.Proptypes = {
+  countTo:Proptypes.number,
+  time:Proptypes.number
+};
 
 export default Counter;

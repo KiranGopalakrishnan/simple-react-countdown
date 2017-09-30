@@ -98,13 +98,13 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var Countdown = function (_Component) {
-  _inherits(Countdown, _Component);
+var Counter = function (_Component) {
+  _inherits(Counter, _Component);
 
-  function Countdown() {
-    _classCallCheck(this, Countdown);
+  function Counter() {
+    _classCallCheck(this, Counter);
 
-    var _this = _possibleConstructorReturn(this, (Countdown.__proto__ || Object.getPrototypeOf(Countdown)).call(this));
+    var _this = _possibleConstructorReturn(this, (Counter.__proto__ || Object.getPrototypeOf(Counter)).call(this));
 
     _this.state = {
       currentCount: true
@@ -112,7 +112,7 @@ var Countdown = function (_Component) {
     return _this;
   }
 
-  _createClass(Countdown, [{
+  _createClass(Counter, [{
     key: "componentDidMount",
     value: function componentDidMount() {
       var countTo = parseInt(this.props.CountTo);
@@ -140,16 +140,21 @@ var Countdown = function (_Component) {
 
       return _react2.default.createElement(
         "span",
-        { ref: "myRef" },
+        { ref: "simple-react-counter" },
         this.state.currentCount
       );
     }
   }]);
 
-  return Countdown;
+  return Counter;
 }(_react.Component);
 
-exports.default = Countdown;
+Counter.Proptypes = {
+  countTo: Proptypes.number,
+  time: Proptypes.number
+};
+
+exports.default = Counter;
 
 /***/ })
 /******/ ]);

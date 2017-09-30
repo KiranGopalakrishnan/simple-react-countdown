@@ -29,4 +29,4 @@ class App extends Component {
 }
 export default App;
 ```
-Find the project npm registery at : https://www.npmjs.com/package/simple-react-countdown
+Find the project npm registery at : https://www.npmjs.com/package/simple-react-counter
