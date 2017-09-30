@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class Countdown extends Component {
+class Counter extends Component {
   constructor(){
     super();
     this.state={
@@ -22,17 +22,16 @@ class Countdown extends Component {
     var tickTimer =setInterval(function(){
       var requiredStep =(counter+parseInt(dividedByTimeResult*timerInterval))<countTo?parseInt((countTo/time)*timerInterval):parseInt(countTo-counter);
       counter>=countTo?clearInterval(tickTimer):counter = counter+requiredStep;
-      if (selfe.refs.myRef) {
+      if (selfe.refs.counterRef) {
         selfe.setState({currentCount:counter});
       }
     }, timerInterval);
   }
   render() {
-
     return (
-      <span ref="myRef">{this.state.currentCount}</span>
+      <span ref="counterRef">{this.state.currentCount}</span>
     );
   }
 }
 
-export default Countdown;
+export default Counter;
