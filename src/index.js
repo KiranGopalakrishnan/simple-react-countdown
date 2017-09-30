@@ -10,6 +10,7 @@ class Countdown extends Component {
   componentDidMount(){
     var countTo = parseInt(this.props.CountTo);
     var time = parseInt(this.props.time);
+    var alertMeAt = parseInt(this.props.alertMeAt);
     //Time interval calculated based user input
     var timerInterval = Math.round(countTo/time);
     //Initial counter
@@ -30,9 +31,10 @@ class Countdown extends Component {
   render() {
 
     return (
-      <span ref="myRef">{this.state.currentCount}</span>
+      <span ref="simple-react-counter">{this.state.currentCount}</span>
     );
   }
 }
+
 
 export default Countdown;
