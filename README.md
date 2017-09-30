@@ -1,4 +1,4 @@
-# simple-react-countdown
+# simple-react-counter
 
 This react component allows you to add a number count down/up in your react project with ease.
 The plugin is highly customizable making it easy to adapt it your project needs.
