@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class Countdown extends Component {
+class Counter extends Component {
   constructor(){
     super();
     this.state={
@@ -10,7 +10,6 @@ class Countdown extends Component {
   componentDidMount(){
     var countTo = parseInt(this.props.CountTo);
     var time = parseInt(this.props.time);
-    var alertMeAt = parseInt(this.props.alertMeAt);
     //Time interval calculated based user input
     var timerInterval = Math.round(countTo/time);
     //Initial counter
@@ -37,4 +36,4 @@ class Countdown extends Component {
 }
 
 
-export default Countdown;
+export default Counter;
