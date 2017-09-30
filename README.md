@@ -22,7 +22,7 @@ class App extends Component {
       <div className="App">
       //CountTo --> Decides what number will the counter stop counting
       //time--> the time constraint for finishing the count
-        <Counter CountTo="10101" time="1000" />
+        <Counter CountTo={10101} time={1000} />
       </div>
     );
   }

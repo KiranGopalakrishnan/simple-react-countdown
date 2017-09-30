@@ -22,21 +22,16 @@ class Counter extends Component {
     var tickTimer =setInterval(function(){
       var requiredStep =(counter+parseInt(dividedByTimeResult*timerInterval))<countTo?parseInt((countTo/time)*timerInterval):parseInt(countTo-counter);
       counter>=countTo?clearInterval(tickTimer):counter = counter+requiredStep;
-      if (selfe.refs.myRef) {
+      if (selfe.refs.counterRef) {
         selfe.setState({currentCount:counter});
       }
     }, timerInterval);
   }
   render() {
-
     return (
-      <span ref="simple-react-counter">{this.state.currentCount}</span>
+      <span ref="counterRef">{this.state.currentCount}</span>
     );
   }
 }
-Counter.Proptypes = {
-  countTo:Proptypes.number,
-  time:Proptypes.number
-};
 
 export default Counter;

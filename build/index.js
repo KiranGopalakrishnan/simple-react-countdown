@@ -129,7 +129,7 @@ var Counter = function (_Component) {
       var tickTimer = setInterval(function () {
         var requiredStep = counter + parseInt(dividedByTimeResult * timerInterval) < countTo ? parseInt(countTo / time * timerInterval) : parseInt(countTo - counter);
         counter >= countTo ? clearInterval(tickTimer) : counter = counter + requiredStep;
-        if (selfe.refs.myRef) {
+        if (selfe.refs.counterRef) {
           selfe.setState({ currentCount: counter });
         }
       }, timerInterval);
@@ -137,10 +137,9 @@ var Counter = function (_Component) {
   }, {
     key: "render",
     value: function render() {
-
       return _react2.default.createElement(
         "span",
-        { ref: "simple-react-counter" },
+        { ref: "counterRef" },
         this.state.currentCount
       );
     }
@@ -148,11 +147,6 @@ var Counter = function (_Component) {
 
   return Counter;
 }(_react.Component);
-
-Counter.Proptypes = {
-  countTo: Proptypes.number,
-  time: Proptypes.number
-};
 
 exports.default = Counter;
 
